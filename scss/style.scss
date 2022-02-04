@@ -19,6 +19,7 @@ html {
 
 .logos img {
     height: 100px;
+    filter: invert(1);
 }
 
 nav .nav-item {
@@ -42,6 +43,7 @@ nav .nav-item {
 
 .hero h1 {
     font-size: 50px;
+    
 }
 
 .productos {
@@ -94,7 +96,7 @@ nav .nav-item {
     width: 100%;
     height: 70vh;
     position: relative;
-    background-image: url('../img/3_botellas_chicas.jpg');
+    //background-image: url('../img/3_botellas_chicas.jpg');
     background-size: cover;
     background-position: bottom;
 }
@@ -247,5 +249,62 @@ footer a {
         width: 70%;
         padding: 20px 0 !important;
     }
+}
+.row {
+    /* background: #ccc; */
+    display: flex;
+    gap: 100px;
+}
 
+.card-integrante {
+    width: 300px !important;
+    height: 300px !important;
+    border: 2px dashed #000;
+    position: relative;
+}
+
+.card-integrante img {
+    width: 100%;
+    height: 100%;
+    outline: 2px solid #000;
+    opacity: 1;
+    position: absolute;
+    transition: 0.4s;
+}
+
+.card-integ-info {
+    width: 100%;
+    height: 100%;
+    outline: 2px solid #000;
+    position: absolute;
+    transition: 0.4s;
+    background: transparent;
+    color: transparent;
+    text-align: center;
+
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.card-integrante:hover {
+    transition-delay: 0.4s;
+}
+
+.card-integrante:hover > * {
+    transform: translate(-30px, -30px);
+}
+
+.card-integrante:hover img {
+    opacity: 0;
+}
+
+.card-integrante:hover .card-integ-info {
+    background: #222;
+    color: #fff;    
 }
